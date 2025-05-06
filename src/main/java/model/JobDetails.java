@@ -35,8 +35,11 @@ public class JobDetails {
     return joiningDate;
   }
 
-  public String getProfessionalDetails() {
-    return "Position: " + position + ", Salary: " + salary + ", Employment Type: " + employmentType + ", Joining Date: " + joiningDate;
+  @Override
+  public String toString() {
+    return "Position: " + position + ", Salary: " + salary +
+        ", Employment Type: " + employmentType +
+        ", Joining Date: " + joiningDate;
   }
 
 }

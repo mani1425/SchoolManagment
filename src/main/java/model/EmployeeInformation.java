@@ -6,12 +6,13 @@ import java.util.List;
 import java.util.List;
 
 public class EmployeeInformation {
+  private String name;
   private Address address;
   private PersonalDetails personalDetails;
   private JobDetails jobDetails;
   private List<String> skills;
 
-  public EmployeeInformation(Address address, PersonalDetails personalDetails, JobDetails jobDetails, List<String> skills) {
+  public EmployeeInformation(String name,Address address, PersonalDetails personalDetails, JobDetails jobDetails, List<String> skills) {
     this.address = address;
     this.personalDetails = personalDetails;
     this.jobDetails = jobDetails;
@@ -22,12 +23,25 @@ public class EmployeeInformation {
     jobDetails.updateSalary(newSalary);
   }
 
-  public String getFullPersonalDetails() {
-    return personalDetails.getPersonalDetails();
+  public PersonalDetails getPersonalDetails() {
+    return personalDetails;
   }
 
   public String getFullProfessionalDetails() {
-    return jobDetails.getProfessionalDetails();
+    return jobDetails.toString();
   }
+
+  public JobDetails getJobDetails() {
+    return jobDetails;
+  }
+
+  public List<String> getSkills() {
+    return skills;
+  }
+
+  public String getName() {
+    return name;
+  }
+
 
 }

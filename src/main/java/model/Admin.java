@@ -18,4 +18,7 @@ public class Admin {
   public String getAdminDetails() {
     return "Admin: " + name + ", ID: " + adminID + ", Contact: " + contact;
   }
+  public String getAdminID() {
+    return adminID;
+  }
 }

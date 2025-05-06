@@ -3,7 +3,7 @@ package model;
 
 public class Trainer {
   private String trainerID;
-  private EmployeeInformation employeeInformation; // Trainer IS an Employee
+  private EmployeeInformation employeeInformation;
   private String specialization;
 
   public Trainer(String trainerID, EmployeeInformation employeeInformation, String specialization) {
@@ -11,9 +11,8 @@ public class Trainer {
     this.employeeInformation = employeeInformation;
     this.specialization = specialization;
   }
-
   public String getTrainerName() {
-    return this.employeeInformation.getFullPersonalDetails(); // From Employee
+    return this.employeeInformation.getName();
   }
 
   public String getSpecialization() {

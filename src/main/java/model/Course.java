@@ -7,9 +7,9 @@ public class Course {
   private int courseID;
   private String courseName;
   private int credits;
-  private List<Trainer> trainers = new ArrayList<>();
   private int maxStudents;
   private String category;
+  private List<Trainer> trainers = new ArrayList<>();
 
   public Course(int courseID, String courseName, int credits, int maxStudents, String category) {
     this.courseID = courseID;
@@ -27,12 +27,19 @@ public class Course {
     return trainers;
   }
 
+  public int getCredits() {
+    return credits;
+  }
+
   public String getCourseName() {
     return courseName;
   }
 
-  public int getCredits() {
-    return credits;
+  public int getCourseID() {
+    return courseID;
+  }
+
+  public String getCategory() {
+    return category;
   }
 }
-

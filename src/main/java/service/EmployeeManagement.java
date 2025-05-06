@@ -17,10 +17,15 @@ public class EmployeeManagement {
   }
 
   public void showAllEmployees() {
+    System.out.println("\n Employees:");
     for (EmployeeInformation emp : employees) {
-      System.out.println(emp.getFullPersonalDetails() + " | " + emp.getFullProfessionalDetails());
+      System.out.println("Name: " + emp.getName()
+          + " | Job Title: " + emp.getJobDetails().getPosition()
+          + " | Salary: " + emp.getJobDetails().getSalary()
+          + " | Skills: " + emp.getSkills());
     }
   }
+
 
   public List<EmployeeInformation> getAllEmployees() {
     return employees;
